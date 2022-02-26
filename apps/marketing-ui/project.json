@@ -1,0 +1,73 @@
+{
+  "root": "apps/marketing-ui",
+  "sourceRoot": "apps/marketing-ui/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/marketing-ui",
+        "index": "apps/marketing-ui/src/index.html",
+        "baseHref": "/",
+        "main": "apps/marketing-ui/src/main.tsx",
+        "polyfills": "apps/marketing-ui/src/polyfills.ts",
+        "tsConfig": "apps/marketing-ui/tsconfig.app.json",
+        "assets": [
+          "apps/marketing-ui/src/favicon.ico",
+          "apps/marketing-ui/src/assets"
+        ],
+        "styles": ["apps/marketing-ui/src/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/marketing-ui/src/environments/environment.ts",
+              "with": "apps/marketing-ui/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "marketing-ui:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "marketing-ui:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/marketing-ui/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/marketing-ui"],
+      "options": {
+        "jestConfig": "apps/marketing-ui/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
