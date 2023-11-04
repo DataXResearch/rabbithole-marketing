@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "marketing-ui": "apps/marketing-ui",
-    "marketing-ui-e2e": "apps/marketing-ui-e2e"
+    "marketing-ui-e2e": "apps/marketing-ui-e2e",
+    "ui": "libs/ui"
   }
 }
