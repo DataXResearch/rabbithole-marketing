@@ -63,7 +63,7 @@ const LandingPage: React.FC = () => {
     <>
       <Helmet title="Landing" />
       <Hero />
-      <Features {...{ features }} />
+      {/* <Features {...{ features }} /> */}
       {/* <MoreFeatures {...{ features: moreFeatures }} /> */}
       {/* <FaqPreview /> */}
     </>

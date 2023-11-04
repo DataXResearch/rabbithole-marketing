@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import React, { useEffect } from 'react';
 import { Container, Nav, Navbar as RBNavbar } from 'react-bootstrap';
 
-import Logo from '../assets/logoipsum-logo.svg';
+import Logo from '../assets/logo.png';
 import { Menu } from './menu.component';
 
 type NavbarProps = {
@@ -58,7 +58,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <RBNavbar.Brand href="/">
               <img
                 src={Logo}
-                height="30"
+                height="70"
                 className="d-inline-block align-top"
                 alt="logo"
               />
@@ -79,7 +79,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   </NavLink>
                 </Nav.Item> */}
 
-                <Nav.Item as="li">
+                {/*<Nav.Item as="li">
                   <a
                     href="https://chrome.google.com/webstore/category/extensions"
                     className={classNames(
@@ -91,7 +91,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   >
                     Download
                   </a>
-                </Nav.Item>
+                </Nav.Item>*/}
               </Nav>
             </RBNavbar.Collapse>
           </Container>

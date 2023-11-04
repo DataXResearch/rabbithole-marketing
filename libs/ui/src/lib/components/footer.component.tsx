@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-import Logo from '../assets/logoipsum-logo.svg';
+import Logo from '../assets/logo.png';
 
 export const Footer: React.FC = () => {
   return (
@@ -16,13 +16,13 @@ export const Footer: React.FC = () => {
           <Col className="text-center">
             <ul className="list-inline list-with-separator">
               <li className="list-inline-item me-0">
-                <Link to="/">Landing</Link>
+                <Link to="/terms-of-service">Privacy Policy</Link>
               </li>
               {/* <li className="list-inline-item me-0">
                 <Link to="#">Offerings</Link>
               </li> */}
               <li className="list-inline-item me-0">
-                <Link to="#">Contact</Link>
+                <a href="mailto:info@govindmohan.com">Contact</a>
               </li>
               {/* <li className="list-inline-item me-0">
                 <Link to="#">Privacy</Link>
@@ -40,8 +40,7 @@ export const Footer: React.FC = () => {
               </li> */}
             </ul>
             <p className="mt-2 fs-14">
-              Presented by DataX Research. Crafted with love by{' '}
-              <a href="https://www.dezzign.studio/">Sal Anvarov</a>
+              Presented by DataX Research.
             </p>
             <img src={Logo} height="30" className="mt-2 mb-4" alt="" />
           </Col>

@@ -3,6 +3,7 @@
 import FeatherIcon from 'feather-icons-react';
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
+import AppScreenshot from '../assets/app-screenshot.png';
 
 import FormInput from './form-input.component';
 
@@ -13,70 +14,61 @@ export const Hero: React.FC = () => {
         <Row className="text-center text-md-start">
           <Col lg={6} className="pt-2 pt-sm-3">
             <h1 className="hero-title">
-              Lorem ipsum dolor sit amet,{' '}
+              Built for serial tab hoarders,{' '}
               <span className="highlight highlight-warning d-inline-block">
                 Rabbithole
               </span>{' '}
-              consectetur adipiscing elit
+              makes sure you don't lose important websites.
             </h1>
             <p className="mt-3 fs-17 text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Rabbithole is a tab manager that allows you track your internet exploration.
             </p>
 
             <div className="mt-4 mt-sm-5 pt-0">
               <Row className="g-2 text-start">
-                <Col md={4} lg={6}>
-                  <FormInput
-                    type="email"
-                    className="form-control mb-2 me-sm-2 shadow-sm"
-                    name="email"
-                    id="email"
-                    placeholder="Your Email"
-                  />
-                </Col>
                 <Col sm={2}>
-                  <Button type="submit" className="mb-2 text-nowrap">
+                  <Button href="https://form.zootools.co/go/tfln5Mfi8mFGVRYk5da8" type="submit" className="mb-2 text-nowrap">
                     Get updates
                   </Button>
                 </Col>
               </Row>
             </div>
-            <div className="d-flex mt-2">
-              <div className="me-4">
+            {/* <div className="d-flex mt-2">
+                <div className="me-4">
                 <FeatherIcon
-                  icon="check-circle"
-                  className="icon icon-dual-success icon-xs me-1"
+                icon="check-circle"
+                className="icon icon-dual-success icon-xs me-1"
                 />
                 Free
-              </div>
-              <div className="me-4">
+                </div>
+                <div className="me-4">
                 <FeatherIcon
-                  icon="check-circle"
-                  className="icon icon-dual-success icon-xs me-1"
+                icon="check-circle"
+                className="icon icon-dual-success icon-xs me-1"
                 />
                 Privacy compliant
-              </div>
-              <div>
+                </div>
+                <div>
                 <FeatherIcon
-                  icon="check-circle"
-                  className="icon icon-dual-success icon-xs me-1"
+                icon="check-circle"
+                className="icon icon-dual-success icon-xs me-1"
                 />
                 Minimal Setup
-              </div>
-            </div>
+                </div>
+                </div> */}
           </Col>
-          <Col lg={{ offset: 2, span: 4 }} className="text-end">
-            <div className="position-relative">
+          {/* <Col lg={{ offset: 2, span: 4 }} className="text-end">
+              <div className="position-relative">
               <div className="hero-img mt-4 mt-sm-0">
-                <img
-                  src="http://localhost:3000/static/media/app1.5399afbbb2dd5d1328aa.png"
-                  alt="extension"
-                  className="img-fluid"
-                  data-bs-aos="zoom-in-up"
-                />
+              <img
+              src={AppScreenshot}
+              alt="extension"
+              className="img-fluid"
+              data-bs-aos="zoom-in-up"
+              />
               </div>
-            </div>
-          </Col>
+              </div>
+              </Col> */}
         </Row>
       </Container>
     </section>
